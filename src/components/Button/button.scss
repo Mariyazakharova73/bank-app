@@ -1,0 +1,54 @@
+.btn {
+  @include button-reset();
+  height: 50px;
+  padding: 16px;
+  border-radius: 16px;
+  font-size: $font-size-m;
+  font-weight: $font-weight-bold;
+  line-height: 112%;
+  letter-spacing: 0.02em;
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+  .btn {
+    width: 100%;
+  }
+}
+
+/* Темы */
+.btn--primary {
+  background-color: $primary-color;
+  color: #fff;
+}
+
+.btn--primary:hover {
+  transition: all 0.4s ease-in-out;
+  &:hover {
+    background-color: $secondary-color;
+  }
+}
+
+.btn--secondary {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+// .btn--secondary:hover {
+//   background-color: #5a6268;
+// }
+
+/* Размеры */
+.btn--size_m {
+}
+
+.btn--size_l {
+}
+
+.btn--size_xl {
+}
+
+.btn--disabled {
+  background-color: #e0e0e0;
+  color: #a0a0a0;
+  cursor: not-allowed;
+}

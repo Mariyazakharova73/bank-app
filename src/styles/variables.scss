@@ -1,0 +1,73 @@
+// Colors
+$primary-color: #003cff;
+$secondary-color: #5b35d5;
+$bg-color: #f5f4ff;
+
+$accent-link-color: #b2a35f;
+//$accent-color: #b2a35f;
+$logo-color: #b4387a;
+
+$success-color: #2fab73;
+$danger-color: #ff5631;
+
+$text-color-light: #fff;
+$text-color-dark: #000;
+
+$text-color-item: #1d1929;
+$text-color-title: #1c1c1e;
+$text-color-heading: #0b132a;
+$text-color-heading-dark: #1c1c1e;
+$text-color-gray: #4f5665;
+
+// $text-color-dark: #1C1C1E;
+// background: #000000;
+// background: #4F5665;
+// background: #808080;
+
+$page-width: 1440px;
+
+// Font
+$font-family-primary: "Ubuntu", sans-serif;
+$font-family-secondary: "Rubik", sans-serif;
+
+$font-size-xs: 12px;
+$font-size-s: 14px;
+$font-size-m: 16px;
+$font-size-l: 20px;
+$font-size-xl: 30px;
+$font-size-xxl: 35px;
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+// Border
+$border-radius: 4px;
+
+// Shadow
+$shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 3px 6px rgba(0, 0, 0, 0.15);
+$shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+// Breakpoints
+$breakpoint-sm: 500px; // mobile
+$breakpoint-md: 768px;
+$breakpoint-lg: 920px; // tablet
+$breakpoint-xl: 1300px; // desktop
+
+// Z-index
+$z-index-modal: 1000;
+
+// Animation
+$animation-duration: 0.3s;
+$animation-timing-function: ease-in-out;
+
+// --font-weight-thin: 100;      /* Очень тонкий */
+//   --font-weight-light: 300;     /* Легкий */
+//   --font-weight-regular: 400;   /* Обычный */
+//   --font-weight-medium: 500;    /* Средний */
+//   --font-weight-semibold: 600;  /* Полужирный */
+//   --font-weight-bold: 700;      /* Жирный */
+//   --font-weight-extrabold: 800; /* Очень жирный */
+//   --font-weight-black: 900;     /* Максимально жирный */

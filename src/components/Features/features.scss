@@ -1,0 +1,101 @@
+.features {
+  @include flex(space-between);
+  padding-top: 112px;
+  column-gap: 50px;
+  row-gap: 20px;
+}
+
+@media screen and (max-width: $breakpoint-xl) {
+  .features {
+    column-gap: 30px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-lg) {
+  .features {
+    padding-top: 70px;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: $breakpoint-md) {
+  .features {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.features__img {
+  display: block;
+  max-width: 508px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.features__content {
+  margin-top: 74px;
+  font-family: $font-family-secondary;
+}
+
+@media screen and (max-width: $breakpoint-xl) {
+  .features__content {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: $breakpoint-md) {
+  .features__content {
+    text-align: center;
+  }
+}
+
+.features__title {
+  font-size: $font-size-xxl;
+  font-weight: $font-weight-medium;
+  line-height: 50px;
+  color: $text-color-heading;
+}
+
+.features__text {
+  margin-top: 20px;
+  font-size: $font-size-m;
+  font-weight: $font-weight-regular;
+  line-height: 30px;
+  color: $text-color-gray;
+}
+
+.features__list {
+  @include reset-ul();
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media screen and (max-width: $breakpoint-md) {
+  .features__list {
+    align-items: center;
+    min-width: 300px;
+  }
+}
+
+.features__icon {
+  background-image: url("../../assets/images/features-circle-check.png");
+  width: 20px;
+  height: 20px;
+}
+
+.features__list-item {
+  @include flex(flex-start, center);
+  gap: 16px;
+  font-size: $font-size-m;
+  font-weight: $font-weight-regular;
+  line-height: 30px;
+  color: $text-color-gray;
+}
+
+@media screen and (max-width: $breakpoint-md) {
+  .features__list-item {
+    min-width: 250px;
+  }
+}

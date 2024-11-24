@@ -1,15 +1,16 @@
 import { RouteProps } from "react-router-dom";
-import { HomePage, LoanPage, NotFoundPage } from "../pages";
+import { LoanPage, NotFoundPage } from "../pages";
+import HomePage from "../pages/HomePage/HomePage";
 
 export enum AppRoutes {
   MAIN = "main",
-  LOAN = "loan",
+  CREDIT_CARD = "credit",
   NOT_FOUND = "not_found",
 }
 
 export const RoutePath: Record<AppRoutes, string> = {
   [AppRoutes.MAIN]: "/",
-  [AppRoutes.LOAN]: "/loan",
+  [AppRoutes.CREDIT_CARD]: "/credit",
   [AppRoutes.NOT_FOUND]: "*",
 };
 
@@ -18,8 +19,8 @@ export const routeConfig: Record<AppRoutes, RouteProps> = {
     path: RoutePath.main,
     element: <HomePage />,
   },
-  [AppRoutes.LOAN]: {
-    path: RoutePath.loan,
+  [AppRoutes.CREDIT_CARD]: {
+    path: RoutePath.credit,
     element: <LoanPage />,
   },
   [AppRoutes.NOT_FOUND]: {

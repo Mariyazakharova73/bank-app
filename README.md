@@ -32,3 +32,7 @@ React, react-router-dom, scss
 Запустить eslint:
 
     npm run lint
+
+<!-- Можно ли использовать css.module или scss.module. Как тогда БЭМ применяется? -->
+
+<!-- Можно ли google fonts использовать или локально подключать? -->
