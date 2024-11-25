@@ -1,0 +1,29 @@
+.section-title {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-medium;
+  line-height: 50px;
+}
+
+.section-title--light {
+  color: $text-color-title;
+}
+
+.section-title--medium {
+  color: #1c1c1c;
+}
+
+.section-title--dark {
+  color: $color-dark;
+}
+
+.section-title--left {
+  text-align: left;
+}
+
+.section-title--center {
+  text-align: center;
+}
+
+.section-title--right {
+  text-align: right;
+}

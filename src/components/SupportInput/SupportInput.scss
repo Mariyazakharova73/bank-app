@@ -1,0 +1,66 @@
+.subscribe-form {
+  @include flex(space-between, center);
+  background-color: $color-light;
+  border-radius: 20px;
+  padding: 23px 32px;
+  width: 525px;
+  box-shadow: 0px 10px 20px 0px #363a781a;
+  column-gap: 10px;
+}
+
+@media screen and (max-width: $breakpoint-md) {
+  .subscribe-form {
+    flex-wrap: wrap;
+
+    row-gap: 10px;
+    justify-content: center;
+  }
+}
+
+.subscribe-form__input-container {
+  display: flex;
+  align-items: center;
+}
+
+.subscribe-form__icon {
+  margin-right: 10px;
+  width: 28px;
+}
+
+.subscribe-form__input {
+  border: none;
+  outline: none;
+  font-family: $font-family-input;
+  font-size: $font-size-l;
+  width: 100%;
+}
+
+.subscribe-form__input::placeholder {
+  color: $text-input;
+}
+
+.subscribe-form__button {
+  @include button-reset();
+  @include flex(flex-start, center);
+  padding: 4px 14px;
+  width: 162px;
+  background-color: #6a5af9;
+  color: $color-light;
+  border: none;
+  border-radius: 20px;
+  font-size: $font-size-m;
+  line-height: 20.3px;
+  font-weight: $font-weight-bold;
+  transition: background-color $anim-duration $anim-timing-func;
+
+  &:hover {
+    background-color: $secondary-color;
+  }
+}
+
+@media screen and (max-width: $breakpoint-md) {
+  .subscribe-form__button {
+    width: 100%;
+    justify-content: center;
+  }
+}

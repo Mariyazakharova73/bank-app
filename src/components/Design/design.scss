@@ -1,0 +1,56 @@
+.design {
+  padding-top: 132px;
+  @include flex(space-between);
+  column-gap: 50px;
+  row-gap: 30px;
+}
+
+@media screen and (max-width: $breakpoint-xl) {
+  .design {
+    @include flex(center, center, column, wrap);
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: $breakpoint-lg) {
+  .design {
+    padding-top: 70px;
+  }
+}
+
+.design__title-wrapper {
+  max-width: 610px;
+}
+
+.design__title {
+  margin-bottom: 36px;
+  font-size: 48px;
+  font-weight: $font-weight-bold;
+  line-height: 50px;
+  color: $text-color-title;
+}
+
+.design__cards-list {
+  max-width: 518px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+@media screen and (max-width: $breakpoint-xl) {
+  .design__cards-list {
+    max-width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+.design__list-item {
+  @include reset-ul();
+}
+
+.design__card-img {
+  width: 250px;
+  object-fit: contain;
+  display: block;
+  object-position: center;
+}

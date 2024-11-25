@@ -1,0 +1,45 @@
+.support {
+  padding-top: 64px;
+  padding-bottom: 98px;
+  margin-left: 18px;
+}
+
+.support__accent-text {
+  font-size: 24px;
+  font-weight: $font-weight-bold;
+  line-height: 35.38px;
+  letter-spacing: 0.02em;
+  color: $accent-color;
+  text-align: center;
+}
+
+.support__title {
+  margin-top: 32px;
+  font-size: $font-size-xl;
+  line-height: 120%;
+  letter-spacing: 0.02em;
+  color: $text-color-title;
+  text-align: center;
+  margin-left: 8px;
+}
+
+.support__text {
+  margin-top: 27px;
+  font-size: $font-size-xl;
+  font-weight: $font-weight-medium;
+  line-height: 44.22px;
+  text-align: center;
+  color: $text-color-title;
+  letter-spacing: 0.02em;
+}
+
+.support__input-wrapper {
+  margin-top: 62px;
+  @include flex(center);
+}
+
+@media screen and (max-width: $breakpoint-lg) {
+  .support__input-wrapper {
+    margin-top: 30px;
+  }
+}

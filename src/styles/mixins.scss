@@ -1,0 +1,35 @@
+@mixin flex($justify: flex-start, $align-items: stretch, $direction: row, $wrap: nowrap) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  justify-content: $justify;
+  align-items: $align-items;
+}
+
+@mixin button-reset {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+}
+
+@mixin truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin reset-ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin item-hover($hover-text-color: #5b35d5) {
+  transition: color 0.4s ease-in-out;
+  &:hover {
+    color: $hover-text-color;
+  }
+}

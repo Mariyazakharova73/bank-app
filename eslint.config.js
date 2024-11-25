@@ -9,7 +9,7 @@ import globals from "globals";
 
 export default [
   {
-    ignores: ["dist"],
+    ignores: ["dist", "vite.config.ts"],
   },
   {
     files: ["**/*.{ts,tsx}"],
@@ -44,6 +44,7 @@ export default [
       ...react.configs["jsx-runtime"].rules,
       ...reactHooks.configs.recommended.rules,
       "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
+      "react-refresh/only-export-components": "off",
     },
   },
 ];

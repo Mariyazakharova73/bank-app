@@ -1,5 +1,6 @@
 import { RouteProps } from "react-router-dom";
-import { HomePage, LoanPage, NotFoundPage } from "../pages";
+import { LoanPage, NotFoundPage } from "../pages";
+import HomePage from "../pages/HomePage/HomePage";
 
 export enum AppRoutes {
   MAIN = "main",

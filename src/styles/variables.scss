@@ -1,0 +1,53 @@
+// Colors
+$primary-color: #003cff;
+$secondary-color: #5b35d5;
+
+$bg-color: #f5f4ff;
+$bg-footer: linear-gradient(0deg, #f4f4f4, #f4f4f4),
+  linear-gradient(0deg, rgba(178, 178, 178, 0.2), rgba(178, 178, 178, 0.2));
+
+$accent-link-color: #b2a35f;
+$accent-color: #eb801d;
+$logo-color: #b4387a;
+$success-color: #2fab73;
+$danger-color: #ff5631;
+
+$color-light: #fff;
+$color-dark: #000;
+
+$text-color-item: #1d1929;
+$text-color-title: #1c1c1e;
+$text-color-heading: #0b132a;
+$text-color-gray-light: #808080;
+$text-color-gray: #4f5665;
+$text-input: #9092b0;
+$text-footer: #2d3748;
+
+$page-width: 1440px;
+
+// Font
+$font-family-primary: "Ubuntu", sans-serif;
+$font-family-secondary: "Rubik", sans-serif;
+$font-family-input: "Nunito Sans", sans-serif;
+
+$font-size-xs: 12px;
+$font-size-s: 14px;
+$font-size-m: 16px;
+$font-size-l: 20px;
+$font-size-xl: 30px;
+$font-size-xxl: 35px;
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+// Breakpoints
+$breakpoint-sm: 500px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 920px;
+$breakpoint-xl: 1300px;
+
+// Animation
+$anim-duration: 0.4s;
+$anim-timing-func: ease-in-out;

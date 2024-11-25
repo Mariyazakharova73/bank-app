@@ -1,0 +1,70 @@
+:root {
+  font-family: $font-family-primary;
+  font-size: $font-size-m;
+  font-weight: $font-weight-regular;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0 auto;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: $bg-color;
+}
+
+#root {
+  margin: 0 auto;
+}
+
+main {
+  margin: 0 auto;
+}
+
+.container {
+  max-width: $page-width;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+@media screen and (max-width: $breakpoint-xl) {
+  .container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-md) {
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

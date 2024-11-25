@@ -1,0 +1,42 @@
+.btn {
+  @include button-reset();
+  height: 50px;
+  padding: 16px;
+  border-radius: 16px;
+  font-size: $font-size-m;
+  font-weight: $font-weight-bold;
+  line-height: 112%;
+  letter-spacing: 0.02em;
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+  .btn {
+    width: 100%;
+  }
+}
+
+.btn--primary {
+  background-color: $primary-color;
+  color: #fff;
+  transition: all $anim-duration $anim-timing-func;
+
+  &:hover {
+    background-color: #7796c0;
+  }
+}
+
+.btn--text {
+  background-color: transparent;
+  color: $color-light;
+  padding: 0;
+  transition: all $anim-duration $anim-timing-func;
+
+  &:hover {
+    color: #7796c0;
+  }
+}
+
+.btn--disabled {
+  background-color: #7796c0;
+  cursor: not-allowed;
+}
