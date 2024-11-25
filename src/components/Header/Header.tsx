@@ -1,20 +1,18 @@
 import { NavLink } from "react-router-dom";
 import { RoutePath } from "../../routes";
-// import { NAV_LINKS } from "../../utils/constants";
 import Button from "../Button/Button";
-import "./header.scss";
+import "./Header.scss";
 
 export const NAV_LINKS = [
-  { label: "Credit card", path: RoutePath.credit },
+  { label: "Credit card", path: RoutePath.loan },
   { label: "Product", path: "/test1" },
   { label: "Account", path: "/test2" },
   { label: "Resources", path: "/test3" },
 ];
 
-
 const Header = () => {
   return (
-    <header className="header">
+    <header className="header container">
       <NavLink
         className="header__logo"
         to={RoutePath.main}

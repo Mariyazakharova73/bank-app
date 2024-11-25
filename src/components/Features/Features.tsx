@@ -1,6 +1,6 @@
 import manImg from "../../assets/images/features-man.png";
 import { FEATURES_LIST } from "../../utils/constants";
-import "./features.scss";
+import "./Features.scss";
 
 const Features = () => {
   return (

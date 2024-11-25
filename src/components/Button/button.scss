@@ -15,40 +15,28 @@
   }
 }
 
-/* Темы */
 .btn--primary {
   background-color: $primary-color;
   color: #fff;
-}
+  transition: all $anim-duration $anim-timing-func;
 
-.btn--primary:hover {
-  transition: all 0.4s ease-in-out;
   &:hover {
-    background-color: $secondary-color;
+    background-color: #7796c0;
   }
 }
 
-.btn--secondary {
-  background-color: #6c757d;
-  color: #fff;
-}
+.btn--text {
+  background-color: transparent;
+  color: $color-light;
+  padding: 0;
+  transition: all $anim-duration $anim-timing-func;
 
-// .btn--secondary:hover {
-//   background-color: #5a6268;
-// }
-
-/* Размеры */
-.btn--size_m {
-}
-
-.btn--size_l {
-}
-
-.btn--size_xl {
+  &:hover {
+    color: #7796c0;
+  }
 }
 
 .btn--disabled {
-  background-color: #e0e0e0;
-  color: #a0a0a0;
+  background-color: #7796c0;
   cursor: not-allowed;
 }

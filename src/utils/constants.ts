@@ -16,3 +16,43 @@ export const FEATURES_LIST = [
   "Personal design",
   "Work anywhere in the world",
 ];
+
+export const CURRENCY_LIST = [
+  {
+    value: "60.78",
+    label: "USD",
+  },
+  {
+    value: "9.08",
+    label: "CNY",
+  },
+  {
+    value: "64.78",
+    label: "CHF",
+  },
+  {
+    value: "60.78",
+    label: "EUR",
+  },
+  {
+    value: "0.46",
+    label: "JPY",
+  },
+  {
+    value: "3.39",
+    label: "TRY",
+  },
+];
+
+export const FOOTER__LINKS = [
+  { label: "About bank", path: "#" },
+  { label: "Ask a Question", path: "#" },
+  { label: "Quality of service", path: "#" },
+  { label: "Requisites", path: "#" },
+  { label: "Press center", path: "#" },
+  { label: "Bank career", path: "#" },
+  { label: "Investors", path: "#" },
+  { label: "Analytics", path: "#" },
+  { label: "Business and processes", path: "#" },
+  { label: "Compliance and business ethics", path: "#" },
+];

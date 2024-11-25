@@ -1,0 +1,26 @@
+.world {
+  padding-top: 48px;
+}
+
+.world__text {
+  margin-top: 8px;
+  font-size: $font-size-m;
+  font-weight: $font-weight-medium;
+  line-height: 50px;
+  text-align: center;
+  color: $text-color-title;
+}
+
+.world__img {
+  max-width: 1060px;
+  margin: 48px auto 0;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media screen and (max-width: $breakpoint-md) {
+  .world__img {
+    margin-top: 20px;
+  }
+}

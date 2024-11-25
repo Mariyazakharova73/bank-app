@@ -35,39 +35,35 @@ body {
 }
 
 #root {
-  max-width: $page-width;
   margin: 0 auto;
-  border: 1px solid red;
 }
 
 main {
-  max-width: $breakpoint-xl;
   margin: 0 auto;
 }
 
-@media screen and (max-width: 1440px) {
-  #root {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
+.container {
+  max-width: $page-width;
+  padding-left: 70px;
+  padding-right: 70px;
 }
 
 @media screen and (max-width: $breakpoint-xl) {
-  #root {
+  .container {
     padding-left: 40px;
     padding-right: 40px;
   }
 }
 
 @media screen and (max-width: $breakpoint-md) {
-  #root {
+  .container {
     padding-left: 30px;
     padding-right: 30px;
   }
 }
 
 @media screen and (max-width: $breakpoint-sm) {
-  #root {
+  .container {
     padding-left: 20px;
     padding-right: 20px;
   }

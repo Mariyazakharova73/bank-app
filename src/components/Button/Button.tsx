@@ -1,10 +1,11 @@
 import cn from "classnames";
 import { ButtonHTMLAttributes, PropsWithChildren } from "react";
-import "./button.scss";
+import "./Button.scss";
 
 export enum ButtonTheme {
   PRIMARY = "primary",
   SECONDARY = "secondary",
+  TEXT = "text",
 }
 
 export enum ButtonSizes {
@@ -35,6 +36,7 @@ const Button = (props: PropsWithChildren<ButtonProps>) => {
       className={cn("btn", `btn--${theme}`, `btn--${size}`, { "btn--disabled": disabled }, className)}
       disabled={disabled}
       {...otherProps}
+      type="button"
     >
       {children}
     </button>

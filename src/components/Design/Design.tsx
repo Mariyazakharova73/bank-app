@@ -1,6 +1,6 @@
 import { CARD_IMAGES } from "../../utils/constants";
 import Button from "../Button/Button";
-import "./design.scss";
+import "./Design.scss";
 
 const Design = () => {
   return (

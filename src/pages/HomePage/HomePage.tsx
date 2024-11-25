@@ -1,13 +1,17 @@
 import Design from "../../components/Design/Design";
+import ExchangeRate from "../../components/ExchangeRate/ExchangeRate";
 import Features from "../../components/Features/Features";
-import "./HomePage.scss";
+import Support from "../../components/Support/Support";
+import World from "../../components/World/World";
 
 const HomePage = () => {
   return (
-    <main>
+    <main className="container">
       <Design />
       <Features />
-      <section className=""></section>
+      <ExchangeRate />
+      <World />
+      <Support />
     </main>
   );
 };

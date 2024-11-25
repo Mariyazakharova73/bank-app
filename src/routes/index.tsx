@@ -4,13 +4,13 @@ import HomePage from "../pages/HomePage/HomePage";
 
 export enum AppRoutes {
   MAIN = "main",
-  CREDIT_CARD = "credit",
+  LOAN = "loan",
   NOT_FOUND = "not_found",
 }
 
 export const RoutePath: Record<AppRoutes, string> = {
   [AppRoutes.MAIN]: "/",
-  [AppRoutes.CREDIT_CARD]: "/credit",
+  [AppRoutes.LOAN]: "/loan",
   [AppRoutes.NOT_FOUND]: "*",
 };
 
@@ -19,8 +19,8 @@ export const routeConfig: Record<AppRoutes, RouteProps> = {
     path: RoutePath.main,
     element: <HomePage />,
   },
-  [AppRoutes.CREDIT_CARD]: {
-    path: RoutePath.credit,
+  [AppRoutes.LOAN]: {
+    path: RoutePath.loan,
     element: <LoanPage />,
   },
   [AppRoutes.NOT_FOUND]: {
