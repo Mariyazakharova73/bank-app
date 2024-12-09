@@ -1,0 +1,147 @@
+.slider {
+  @include flex(flex-start, center, column);
+  margin-top: 46px;
+  max-width: 100%;
+  overflow: hidden;
+  gap: 48px;
+}
+
+.slider__viewport {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  width: calc(3 * (320px + 80px) + 100px);
+}
+
+.slider__track {
+  @include reset-ul();
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+  gap: 80px;
+}
+
+@media (max-width: 1439px) {
+  .slider__viewport {
+    width: calc(3 * (320px + 40px) + 40px);
+  }
+
+  .slider__track {
+    gap: 40px;
+  }
+}
+
+@media (max-width: $breakpoint-xl) {
+  .slider__viewport {
+    width: calc(2 * (320px + 40px) + 40px);
+  }
+}
+
+@media (max-width: $breakpoint-lg) {
+  .slider__viewport {
+    width: calc((320px + 40px) + 40px);
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .slider__viewport {
+    width: 320px;
+  }
+
+  .slider__track {
+    gap: 2px;
+  }
+}
+
+.slider__card {
+  width: 320px;
+  height: 448px;
+}
+
+.slider__link {
+  margin: 3px;
+  width: 314px;
+  height: 442px;
+  box-shadow: 0px 2px 4px 0px #00000033, 0px 0px 4px 0px #00000014;
+  padding: 32px;
+  text-align: center;
+  background-color: $color-light;
+
+  border-radius: 28px;
+  display: block;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+
+    img {
+      scale: 1.05;
+    }
+  }
+}
+
+.slider__image {
+  width: 256px;
+  height: 120px;
+  object-fit: cover;
+  object-position: center;
+  transition: all 0.4s ease-in-out;
+  scale: 1;
+}
+
+.slider__title {
+  margin-top: 32px;
+  font-family: $font-family-primary;
+  font-size: $font-size-l;
+  font-weight: $font-weight-medium;
+  line-height: 125%;
+  color: $color-dark;
+
+  @include multiline-ellipsis(4, 104px);
+}
+
+.slider__description {
+  margin-top: 32px;
+  font-family: $font-family-primary;
+  font-size: $font-size-m;
+  font-weight: $font-weight-medium;
+  line-height: 23px;
+  color: $color-dark;
+  @include multiline-ellipsis(4, 96px);
+}
+
+.slider__btns {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  justify-content: end;
+}
+
+.slider__btn {
+  background-color: $color-light;
+  border: 1px solid $primary-color;
+  cursor: pointer;
+  width: 64px;
+  height: 64px;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+
+  img {
+    transition: filter 0.3s ease;
+  }
+
+  &:hover {
+    background-color: $primary-color;
+
+    img {
+      filter: brightness(0) invert(1);
+    }
+  }
+}
+
+.slider__btn:disabled {
+  background-color: $color-gray-light;
+  border: 1px solid $color-gray-light;
+  cursor: not-allowed;
+}

@@ -1,10 +1,65 @@
+import { useEffect, useState } from "react";
+import { fetchCurrencyRates } from "../../api/currencyApi";
 import bankImg from "../../assets/images/exchange-bank.png";
-import { CURRENCY_LIST } from "../../utils/constants";
+import { ConversionRates } from "../../types/apiTypes";
+import { CURRENCIES, TARGET_CURRENCY } from "../../utils/constants/constants";
+import { getMs } from "../../utils/helpers/helpers";
 import Button, { ButtonTheme } from "../Button/Button";
 import SectionTitle, { TitleTheme } from "../SectionTitle/SectionTitle";
+import Spinner from "../Spinner/Spinner";
 import "./ExchangeRate.scss";
 
 const ExchangeRate = () => {
+  const [currencyRates, setCurrencyRates] = useState<ConversionRates | null>(null);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const filteredCurrencies = currencyRates
+    ? Object.entries(currencyRates)
+        .filter(([key]) => CURRENCIES.includes(key))
+        .map(([key, value]) => ({ label: key, value: (1 / value).toFixed(2) }))
+    : [];
+
+  useEffect(() => {
+    const fetchCurrency = async () => {
+      setLoading(true);
+      try {
+        const rates = await fetchCurrencyRates(TARGET_CURRENCY);
+        setCurrencyRates(rates.conversion_rates);
+      } catch (err) {
+        setError("Ошибка при загрузке валют");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    const intervalId = setInterval(fetchCurrency, getMs(15));
+    fetchCurrency();
+
+    return () => clearInterval(intervalId);
+  }, []);
+
+  const renderContent = () => {
+    if (loading) return <Spinner />;
+    if (error) return <p>{error}</p>;
+    if (filteredCurrencies.length) {
+      return (
+        <ul className="exchange-rate__list">
+          {filteredCurrencies.map((item) => (
+            <li
+              key={item.label}
+              className="exchange-rate__item"
+            >
+              <span className="exchange-rate__item-label">{item.label}:</span>
+              {item.value}
+            </li>
+          ))}
+        </ul>
+      );
+    }
+    return <p>Нет данных для отображения</p>;
+  };
+
   return (
     <section className="exchange-rate">
       <div className="exchange-rate__block">
@@ -16,17 +71,7 @@ const ExchangeRate = () => {
         <div className="exchange-rate__content">
           <div>
             <h3 className="exchange-rate__currency-title">Currency</h3>
-            <ul className="exchange-rate__list">
-              {CURRENCY_LIST.map((item) => (
-                <li
-                  key={item.label}
-                  className="exchange-rate__item"
-                >
-                  <span className="exchange-rate__item-label">{item.label}:</span>
-                  {item.value}
-                </li>
-              ))}
-            </ul>
+            {renderContent()}
             <Button
               className="exchange-rate__btn"
               theme={ButtonTheme.TEXT}
