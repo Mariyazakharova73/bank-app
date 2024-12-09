@@ -33,3 +33,13 @@
     color: $hover-text-color;
   }
 }
+
+@mixin multiline-ellipsis($lines: 2, $height: 96px) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-clamp: $lines;
+  -webkit-line-clamp: $lines;
+  height: $height;
+}

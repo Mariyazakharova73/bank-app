@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import logoImg from "../../assets/images/logo.svg";
 import { RoutePath } from "../../routes";
-import { FOOTER__LINKS } from "../../utils/constants";
+import { FOOTER__LINKS } from "../../utils/constants/constants";
 import "./Footer.scss";
 
 const Footer = () => {
