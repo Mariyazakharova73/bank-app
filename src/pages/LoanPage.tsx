@@ -1,5 +1,5 @@
 const LoanPage = () => {
-  return <div>LoanPage</div>;
+  return <main>LoanPage</main>;
 };
 
 export default LoanPage;

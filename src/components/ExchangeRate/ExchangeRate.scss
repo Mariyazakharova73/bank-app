@@ -1,0 +1,109 @@
+.exchange-rate {
+  padding-top: 48px;
+}
+
+.exchange-rate__block {
+  padding: 32px;
+  background: linear-gradient(358.2deg, rgba(178, 178, 178, 0.8) 8.06%, rgba(178, 178, 178, 0) 67.93%);
+  background-color: rgba(244, 244, 244, 0.9);
+  box-shadow: 0px 2px 4px 0px rgba(187, 187, 187, 0.2), 0px 0px 4px 0px rgba(0, 0, 0, 0.08);
+  border-radius: 28px;
+}
+
+.exchange-rate__heading {
+  @include flex(space-between, center);
+  column-gap: 50px;
+  row-gap: 10px;
+  flex-wrap: wrap;
+}
+
+.exchange-rate__subtitle {
+  font-size: $font-size-m;
+  font-weight: $font-weight-medium;
+  line-height: 50px;
+}
+
+.exchange-rate__content {
+  margin-top: 21px;
+  @include flex(space-between, center);
+}
+
+@media screen and (max-width: $breakpoint-md) {
+  .exchange-rate__content {
+    flex-wrap: wrap;
+    column-gap: 50px;
+    row-gap: 10px;
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+}
+
+.exchange-rate__currency-title {
+  font-size: $font-size-l;
+  font-weight: $font-weight-medium;
+  line-height: 50px;
+}
+
+.exchange-rate__list {
+  @include reset-ul();
+  margin-top: 32px;
+  max-width: 409px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+@media screen and (max-width: $breakpoint-md) {
+  .exchange-rate__list {
+    margin-top: 0;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+  .exchange-rate__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.exchange-rate__item {
+  font-size: $font-size-l;
+  font-weight: $font-weight-bold;
+  line-height: 112%;
+  color: $color-dark;
+  letter-spacing: 0.02em;
+  display: flex;
+  gap: 20px;
+}
+
+@media screen and (max-width: $breakpoint-md) {
+  .exchange-rate__item {
+    gap: 5px;
+  }
+}
+
+.exchange-rate__item-label {
+  color: $text-color-gray-light;
+}
+
+.exchange-rate__btn {
+  margin-top: 51px;
+  font-size: $font-size-l;
+  font-weight: $font-weight-bold;
+  line-height: 112%;
+  letter-spacing: 0.02em;
+  height: 22.4px;
+}
+
+@media screen and (max-width: $breakpoint-md) {
+  .exchange-rate__btn {
+    margin-top: 20px;
+  }
+}
+
+.exchange-rate__img {
+  display: block;
+  max-width: 120px;
+  width: 100%;
+  object-fit: cover;
+}
