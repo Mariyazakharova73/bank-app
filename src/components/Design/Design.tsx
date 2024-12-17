@@ -1,4 +1,4 @@
-import { CARD_IMAGES } from "../../utils/constants";
+import { CARD_IMAGES } from "../../utils/constants/constants";
 import Button from "../Button/Button";
 import "./Design.scss";
 

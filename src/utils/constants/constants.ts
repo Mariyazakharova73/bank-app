@@ -1,7 +1,7 @@
-import cardImage1 from "../assets/images/design-card1.jpg";
-import cardImage2 from "../assets/images/design-card2.jpg";
-import cardImage3 from "../assets/images/design-card3.jpg";
-import cardImage4 from "../assets/images/design-card4.jpg";
+import cardImage1 from "../../assets/images/design-card1.jpg";
+import cardImage2 from "../../assets/images/design-card2.jpg";
+import cardImage3 from "../../assets/images/design-card3.jpg";
+import cardImage4 from "../../assets/images/design-card4.jpg";
 
 export const CARD_IMAGES = [
   { src: cardImage1, alt: "Карта1" },
@@ -17,33 +17,6 @@ export const FEATURES_LIST = [
   "Work anywhere in the world",
 ];
 
-export const CURRENCY_LIST = [
-  {
-    value: "60.78",
-    label: "USD",
-  },
-  {
-    value: "9.08",
-    label: "CNY",
-  },
-  {
-    value: "64.78",
-    label: "CHF",
-  },
-  {
-    value: "60.78",
-    label: "EUR",
-  },
-  {
-    value: "0.46",
-    label: "JPY",
-  },
-  {
-    value: "3.39",
-    label: "TRY",
-  },
-];
-
 export const FOOTER__LINKS = [
   { label: "About bank", path: "#" },
   { label: "Ask a Question", path: "#" },
@@ -56,3 +29,6 @@ export const FOOTER__LINKS = [
   { label: "Business and processes", path: "#" },
   { label: "Compliance and business ethics", path: "#" },
 ];
+
+export const TARGET_CURRENCY = "RUB";
+export const CURRENCIES = ["USD", "EUR", "CAD", "CNY", "CHF", "SDG"];

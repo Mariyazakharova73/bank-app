@@ -1,0 +1,18 @@
+.news {
+  padding-top: 48px;
+}
+
+.news__text {
+  margin-top: 8px;
+  font-size: $font-size-m;
+  font-weight: $font-weight-medium;
+  line-height: 50px;
+  text-align: center;
+  color: $text-footer;
+}
+
+.news__spinner {
+  padding: 50px;
+  min-height: 200px;
+  @include flex(center, center);
+}
