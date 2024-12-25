@@ -4,9 +4,9 @@ import bankImg from "../../assets/images/exchange-bank.png";
 import { ConversionRates } from "../../types/apiTypes";
 import { CURRENCIES, TARGET_CURRENCY } from "../../utils/constants/constants";
 import { getMs } from "../../utils/helpers/helpers";
-import Button, { ButtonTheme } from "../Button/Button";
+import Button, { BtnTheme } from "../Button/Button";
+import Loader from "../Loader/Loader";
 import SectionTitle, { TitleTheme } from "../SectionTitle/SectionTitle";
-import Spinner from "../Spinner/Spinner";
 import "./ExchangeRate.scss";
 
 const ExchangeRate = () => {
@@ -40,7 +40,7 @@ const ExchangeRate = () => {
   }, []);
 
   const renderContent = () => {
-    if (loading) return <Spinner />;
+    if (loading) return <Loader />;
     if (error) return <p>{error}</p>;
     if (filteredCurrencies.length) {
       return (
@@ -74,7 +74,7 @@ const ExchangeRate = () => {
             {renderContent()}
             <Button
               className="exchange-rate__btn"
-              theme={ButtonTheme.TEXT}
+              theme={BtnTheme.TEXT}
             >
               All courses
             </Button>

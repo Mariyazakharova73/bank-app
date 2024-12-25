@@ -1,0 +1,55 @@
+.input-wrapper {
+  position: relative;
+}
+
+.input {
+  padding: 13px 16px;
+  background-color: #f9f5e3;
+  height: 40px;
+  border-radius: 6px;
+  border: 1px solid #80808033;
+
+  font-size: $font-size-m;
+  font-weight: $font-weight-regular;
+  line-height: 1;
+
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  width: 100%;
+}
+
+.input::placeholder {
+  font-size: $font-size-s;
+  color: #808080;
+}
+
+.input:focus {
+  border: 2px solid;
+  border-color: #5b35d5;
+}
+
+.input-wrapper__circle {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 20px;
+  right: 19px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+}
+
+.input-wrapper__circle--success {
+  background-image: url("../../assets/images/loan-circle-green.png");
+}
+
+.input-wrapper__circle--error {
+  background-image: url("../../assets/images/loan-circle-red.png");
+}
+
+.input-wrapper__error-message {
+  margin-top: 2px;
+  color: #ff5631;
+  font-size: $font-size-m;
+  font-weight: $font-weight-medium;
+  line-height: 1;
+}

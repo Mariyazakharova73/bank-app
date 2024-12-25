@@ -12,7 +12,7 @@
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
-    "noEmit": true,  // часто используется в Vite, потому что Vite сам компилирует код
+    "noEmit": true,
     "jsx": "react-jsx",
 
     /* Linting */

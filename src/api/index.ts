@@ -13,3 +13,10 @@ export const apiNewsClient = axios.create({
     "Content-Type": "application/json",
   },
 });
+
+export const apiMainClient = axios.create({
+  timeout: 10000,
+  headers: {
+    "Content-Type": "application/json",
+  },
+});

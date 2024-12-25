@@ -1,0 +1,112 @@
+.credit-card {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  background: linear-gradient(180.8deg, rgba(203, 213, 224, 0.624) 34.33%, rgba(254, 235, 200, 0.56) 64.27%);
+  box-shadow: 0px 2px 4px 0px #00000033, 0px 0px 8px 0px #00000014;
+  border-radius: 29px;
+  padding: 48px 117px 48px 32px;
+  @include flex(space-between);
+  gap: 50px;
+}
+
+@media screen and (max-width: $breakpoint-xl) {
+  .credit-card {
+    flex-wrap: wrap-reverse;
+    padding: 32px;
+    justify-content: center;
+  }
+}
+
+.credit-card__title {
+  font-size: 48px;
+  font-weight: $font-weight-bold;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: $color-light;
+}
+
+.credit-card__text {
+  margin-top: 48px;
+  font-size: $font-size-m;
+  font-weight: $font-weight-medium;
+  line-height: 112%;
+  letter-spacing: 0.02em;
+  max-width: 515px;
+  color: $text-footer;
+}
+
+.credit-card__img {
+  margin-top: 31px;
+  width: 100%;
+  object-fit: contain;
+  max-width: 380px;
+  max-height: 226px;
+  border-radius: 20px;
+  height: auto;
+}
+
+@media screen and (max-width: $breakpoint-xl) {
+  .credit-card__img {
+    margin-top: 0;
+  }
+}
+
+.credit-card__list {
+  @include reset-ul();
+  margin-top: 32px;
+  display: flex;
+  gap: 80px;
+}
+
+@media screen and (max-width: $breakpoint-md) {
+  .credit-card__list {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+}
+
+.credit-card__item-title {
+  font-family: $font-family-primary;
+  font-size: $font-size-l;
+  font-weight: $font-weight-bold;
+  line-height: 112%;
+  letter-spacing: 0.02em;
+  color: #3d3d3d;
+}
+
+.credit-card__item-text {
+  margin-top: 8px;
+  font-family: $font-family-primary;
+  font-size: $font-size-m;
+  font-weight: $font-weight-medium;
+  line-height: 112%;
+  letter-spacing: 0.02em;
+}
+
+.credit-card__link {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 32px;
+  height: 50px;
+  width: 145px;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: $font-size-m;
+  font-weight: $font-weight-bold;
+  line-height: 112%;
+  letter-spacing: 0.02em;
+  background-color: $primary-color;
+  color: #fff;
+  transition: all $anim-duration $anim-timing-func;
+
+  &:hover {
+    background-color: #7796c0;
+  }
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+  .credit-card__link {
+    width: 100%;
+  }
+}

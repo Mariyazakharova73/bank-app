@@ -1,0 +1,19 @@
+.cashback-cards {
+  @include reset-ul();
+  margin-top: 32px;
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: $breakpoint-xl) {
+  .cashback-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: $breakpoint-md) {
+  .cashback-cards {
+    grid-template-columns: 1fr;
+  }
+}

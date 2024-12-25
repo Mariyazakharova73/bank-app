@@ -1,0 +1,30 @@
+.cashback-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-radius: 28px;
+  padding: 32px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2), 0px 0px 8px 0px rgba(0, 0, 0, 0.08);
+}
+
+.cashback-card--light {
+  background-color: #eaecee;
+}
+
+.cashback-card--dark {
+  background-color: rgba(136, 179, 184, 0.6);
+}
+
+.cashback-card__text {
+  font-size: $font-size-m;
+  font-weight: $font-weight-medium;
+  line-height: 23.58px;
+  color: rgba(67, 67, 67, 0.9);
+  min-height: 41px;
+}
+
+.cashback-card__title {
+  font-size: 36px;
+  font-weight: $font-weight-bold;
+  line-height: 53.06px;
+}

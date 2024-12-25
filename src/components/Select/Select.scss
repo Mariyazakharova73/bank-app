@@ -1,0 +1,49 @@
+.select {
+  padding: 0 13px;
+  background-color: #f9f5e3;
+  height: 40px;
+  border-radius: 6px;
+  border: 1px solid #80808033;
+
+  font-size: $font-size-m;
+  font-weight: $font-weight-regular;
+  line-height: 1;
+
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  width: 100%;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("../../assets/images/select-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 12px;
+  cursor: pointer;
+}
+
+.select__option {
+  font-size: $font-size-m;
+  font-weight: $font-weight-regular;
+  line-height: 1;
+  background-color: white;
+}
+
+.input::placeholder {
+  font-size: $font-size-s;
+  color: #808080;
+}
+
+.select:focus {
+  border: 2px solid;
+  border-color: #5b35d5;
+}
+
+.select-wrapper__error-message {
+  margin-top: 2px;
+  color: #ff5631;
+  font-size: $font-size-m;
+  font-weight: $font-weight-medium;
+  line-height: 1;
+}

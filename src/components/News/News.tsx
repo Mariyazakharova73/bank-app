@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import { fetchNewsRates } from "../../api/newsApi";
 import { Article } from "../../types/apiTypes";
 import { getMs } from "../../utils/helpers/helpers";
+import Loader from "../Loader/Loader";
 import SectionTitle, { TitlePosition, TitleTheme } from "../SectionTitle/SectionTitle";
 import Slider from "../Slider/Slider";
-import Spinner from "../Spinner/Spinner";
 import "./News.scss";
 
 const News = () => {
@@ -35,7 +35,7 @@ const News = () => {
     if (loading)
       return (
         <div className="news__spinner">
-          <Spinner />
+          <Loader />
         </div>
       );
     if (error) return <p>{error}</p>;
