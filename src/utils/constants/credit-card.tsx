@@ -188,10 +188,10 @@ export const GET_CARD_DATA = [
 ];
 
 export const SELECT_TERM_OPTIONS = [
-  { label: "6 месяцев", value: "6" },
-  { label: "12 месяцев", value: "12" },
-  { label: "18 месяцев", value: "18" },
-  { label: "24 месяца", value: "24" },
+  { label: "6 month", value: "6" },
+  { label: "12 month", value: "12" },
+  { label: "18 month", value: "18" },
+  { label: "24 month", value: "24" },
 ];
 
 export const defaultValues = {
