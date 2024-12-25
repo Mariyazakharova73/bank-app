@@ -2,7 +2,6 @@
   @include button-reset();
   height: 50px;
   padding: 16px;
-  border-radius: 16px;
   font-size: $font-size-m;
   font-weight: $font-weight-bold;
   line-height: 112%;
@@ -39,4 +38,12 @@
 .btn--disabled {
   background-color: #7796c0;
   cursor: not-allowed;
+}
+
+.btn--radius_default {
+  border-radius: 16px;
+}
+
+.btn--radius_small {
+  border-radius: 8px;
 }

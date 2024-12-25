@@ -32,3 +32,5 @@ export const FOOTER__LINKS = [
 
 export const TARGET_CURRENCY = "RUB";
 export const CURRENCIES = ["USD", "EUR", "CAD", "CNY", "CHF", "SDG"];
+
+export const LS_KEY_SUBSCRIBE = "subscribe";

@@ -1,0 +1,50 @@
+.cards {
+  @include reset-ul();
+  margin-top: 49px;
+  margin-bottom: 48px;
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas:
+    "cards__item--1 cards__item--2 cards__item--2 cards__item--3"
+    "cards__item--4 cards__item--4 cards__item--5 cards__item--5";
+}
+
+@media screen and (max-width: 1439px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "cards__item--1 cards__item--2"
+      "cards__item--3 cards__item--4"
+      "cards__item--5 cards__item--5";
+  }
+}
+
+@media screen and (max-width: $breakpoint-lg) {
+  .cards {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "cards__item--1"
+      "cards__item--2"
+      "cards__item--3"
+      "cards__item--4"
+      "cards__item--5";
+  }
+}
+
+.cards__item--1 {
+  grid-area: cards__item--1;
+}
+.cards__item--2 {
+  grid-area: cards__item--2;
+}
+.cards__item--3 {
+  grid-area: cards__item--3;
+}
+.cards__item--4 {
+  grid-area: cards__item--4;
+}
+.cards__item--5 {
+  grid-area: cards__item--5;
+}

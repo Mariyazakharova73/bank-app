@@ -1,0 +1,44 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  border-radius: 28px;
+  padding: 32px;
+  min-width: 407px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2), 0px 0px 8px 0px rgba(0, 0, 0, 0.08);
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+  .card {
+    min-width: 300px;
+  }
+}
+
+.card--light {
+  background-color: rgba(234, 236, 238, 1);
+}
+
+.card--dark {
+  background-color: rgba(127, 146, 172, 0.7);
+}
+
+.card__icon {
+  margin-bottom: 3px;
+}
+
+.card__title {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  line-height: 44.22px;
+  letter-spacing: 0.02em;
+  color: $color-dark;
+}
+
+.card__text {
+  font-size: $font-size-m;
+  font-weight: $font-weight-medium;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: $color-dark;
+  margin-bottom: 10px;
+}

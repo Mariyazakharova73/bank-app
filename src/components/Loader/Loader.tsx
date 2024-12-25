@@ -1,8 +1,8 @@
-import React from "react";
+import { FC } from "react";
 import spinnerImage from "../../assets/images/spinner.png";
-import "./Spinner.scss";
+import "./Loader.scss";
 
-const Spinner: React.FC = () => {
+const Loader: FC = () => {
   return (
     <div className="spinner">
       <img
@@ -14,4 +14,4 @@ const Spinner: React.FC = () => {
   );
 };
 
-export default Spinner;
+export default Loader;

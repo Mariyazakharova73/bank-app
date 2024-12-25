@@ -1,0 +1,64 @@
+.get-card {
+  padding-top: 48px;
+}
+
+.get-card__title {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  line-height: 44.22px;
+  text-align: center;
+}
+
+.get-card__list {
+  @include reset-ul();
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 106px;
+  justify-items: center;
+}
+
+@media screen and (max-width: $breakpoint-xl) {
+  .get-card__list {
+    gap: 50px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: $breakpoint-md) {
+  .get-card__list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.get-card__item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 419px;
+}
+
+.get-card__number-wrapper {
+  @include flex(center, center);
+  gap: 36px;
+}
+
+.get-card__item-number {
+  font-size: $font-size-l;
+  font-weight: $font-weight-bold;
+  line-height: 29.48px;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+  max-width: 48px;
+  height: 48px;
+  @include flex(center, center);
+  width: 100%;
+}
+
+.get-card__item-text {
+  text-align: center;
+  font-size: $font-size-m;
+  font-weight: $font-weight-medium;
+  line-height: 23.58px;
+  color: $color-dark;
+}
