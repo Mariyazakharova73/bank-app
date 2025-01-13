@@ -3,6 +3,8 @@ import cardImage2 from "../../assets/images/design-card2.jpg";
 import cardImage3 from "../../assets/images/design-card3.jpg";
 import cardImage4 from "../../assets/images/design-card4.jpg";
 
+export const BTN_DENY_COLOR = "rgba(217, 55, 55, 0.8)";
+
 export const CARD_IMAGES = [
   { src: cardImage1, alt: "Карта1" },
   { src: cardImage2, alt: "Карта2" },

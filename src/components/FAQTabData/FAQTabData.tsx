@@ -1,4 +1,4 @@
-import { RECEIVING_CARD_DATA, USING_CARD_DATA } from "../../utils/constants/credit-card";
+import { RECEIVING_CARD_DATA, USING_CARD_DATA } from "../../utils/constants/loan";
 import Accordion from "../Accordion/Accordion";
 import "./FAQTabData.scss";
 

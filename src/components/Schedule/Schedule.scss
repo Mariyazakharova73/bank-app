@@ -1,0 +1,94 @@
+.schedule {
+  margin-top: 24px;
+  margin-bottom: 96px;
+}
+
+.schedule__content {
+  background-color: $color-light;
+  border-radius: 28px;
+  padding: 32px;
+  box-shadow: $shadow-default;
+}
+
+.schedule__header {
+  @include flex(start, center);
+  gap: 120px;
+  row-gap: 10px;
+}
+
+@media screen and (max-width: $breakpoint-xl) {
+  .schedule__header {
+    flex-direction: column;
+  }
+}
+
+.schedule__title {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  line-height: 1;
+}
+
+.schedule__step {
+  font-size: $font-size-m;
+  font-weight: $font-weight-medium;
+  line-height: 1;
+}
+
+.schedule__footer {
+  margin-top: 43.5px;
+  @include flex(space-between, center);
+}
+
+@media screen and (max-width: $breakpoint-md) {
+  .schedule__footer {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+}
+
+.schedule__btn {
+  width: 96px;
+  height: 40px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+
+.schedule__btn-home {
+  height: 40px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  width: 128px;
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+  .schedule__btn {
+    width: 100%;
+  }
+}
+
+.schedule__form {
+  @include flex(center, center);
+  gap: 40px;
+}
+
+@media screen and (max-width: $breakpoint-md) {
+  .schedule__form {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+}
+
+.schedule__modal-text {
+  margin-top: 16px;
+  font-size: $font-size-m;
+  font-weight: $font-weight-medium;
+  line-height: 23.58px;
+  letter-spacing: 0.02em;
+  color: #1a202c;
+}
+
+.schedule__modal-btns {
+  margin-top: 35px;
+  @include flex(end, center);
+  gap: 40px;
+}

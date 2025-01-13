@@ -8,7 +8,7 @@ type InputProps = InputHTMLAttributes<HTMLInputElement> & {
 };
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ error, isTouched, isValid, onChange, type = "text", ...props }, ref) => {
+  ({ error, isTouched, isValid, onChange, type = "text", name, ...props }, ref) => {
     const inputClass = `input ${error ? "input--error" : isValid ? "input--success" : ""}`;
 
     const circleClass = `input-wrapper__circle ${

@@ -1,4 +1,4 @@
-import { RATES_CARD_DATA } from "../../utils/constants/credit-card";
+import { RATES_CARD_DATA } from "../../utils/constants/loan";
 import "./RatesTabData.scss";
 const RatesTabData = () => {
   return (

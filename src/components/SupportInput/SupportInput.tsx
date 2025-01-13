@@ -24,7 +24,7 @@ const SupportInput = (props: SupportInputProps) => {
       localStorage.setItem(LS_KEY_SUBSCRIBE, "true");
       onSuccess();
     } catch (err) {
-      setError("Ошибка при подписке на новости");
+      setError("Error when subscribing to news");
     } finally {
       setLoading(false);
     }

@@ -1,0 +1,49 @@
+.modal {
+  @include flex(center, center);
+  visibility: hidden;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: visibility 0.5s, opacity 0.5s ease-in-out;
+  z-index: 2;
+}
+
+.modal--opened {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal__content {
+  background: $color-light;
+  padding: 16px;
+  position: relative;
+  width: 448px;
+  max-width: 90%;
+}
+
+.modal__header {
+  @include flex(space-between, center);
+}
+
+.modal__title {
+  font-size: 16px;
+  font-weight: $font-weight-bold;
+  line-height: 23.58px;
+  letter-spacing: 0.02em;
+  color: $text-color-title;
+}
+
+.modal__close-btn {
+  @include button-reset();
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+  background-image: url(../../assets/images/loan-close-btn.svg);
+  background-position: center;
+  transition: opacity $anim-duration $anim-timing-func;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}

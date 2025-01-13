@@ -1,0 +1,32 @@
+.submit-info {
+  padding: 24px 20px 34px;
+  border: 1px solid #5b35d5;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 32px;
+
+  &--no-border {
+    border: none;
+  }
+}
+
+.submit-info__title {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  line-height: 112%;
+  letter-spacing: 0.02em;
+  color: $text-color-title;
+  text-align: center;
+}
+
+.submit-info__text {
+  font-size: $font-size-m;
+  font-weight: $font-weight-medium;
+  line-height: 112%;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: $text-color-gray;
+}

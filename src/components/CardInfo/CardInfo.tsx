@@ -1,4 +1,4 @@
-import { tabs } from "../../utils/constants/credit-card";
+import { tabs } from "../../utils/constants/loan";
 import Tabs from "../Tabs/Tabs";
 import "./CardInfo.scss";
 

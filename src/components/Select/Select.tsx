@@ -14,6 +14,11 @@ const Select = forwardRef<HTMLSelectElement, SelectProps>(({ error, options, ...
         ref={ref}
         className={`select ${error ? "" : ""} `}
       >
+        <option
+          value=""
+          disabled
+          hidden
+        ></option>
         {options.map((option) => (
           <option
             className="select__option"

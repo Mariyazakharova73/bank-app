@@ -1,0 +1,14 @@
+.circle {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: block;
+}
+
+.circle--success {
+  background-image: url("../../assets/images/loan-circle-green.png");
+}
+
+.circle--error {
+  background-image: url("../../assets/images/loan-circle-red.png");
+}

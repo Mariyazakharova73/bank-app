@@ -1,0 +1,10 @@
+.sign-status {
+  margin-top: 24px;
+  height: 371px;
+  @include flex(center, center);
+  margin-bottom: 96px;
+}
+
+.sign-status__wrapper {
+  max-width: 554px;
+}

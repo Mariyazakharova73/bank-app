@@ -1,0 +1,82 @@
+.credit-offers {
+  @include reset-ul();
+  margin-top: 48px;
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-bottom: 96px;
+}
+
+@media screen and (max-width: 1439px) {
+  .credit-offers {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: $breakpoint-xl) {
+  .credit-offers {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: $breakpoint-md) {
+  .credit-offers {
+    grid-template-columns: 1fr;
+  }
+}
+
+.credit-offers__item {
+  background-color: $color-light;
+  border-radius: 28px;
+  box-shadow: $shadow-default;
+  padding: 32px;
+  @include flex(center, center, column);
+  font-size: $font-size-m;
+  font-weight: $font-weight-medium;
+  line-height: 112%;
+  letter-spacing: 0.02em;
+  color: $text-color-title;
+  transition: all $anim-duration $anim-timing-func;
+  border: 2px solid transparent;
+
+  &:hover {
+    border: 2px solid #003cff;
+  }
+}
+
+.credit-offers__img {
+  display: block;
+  width: 150px;
+  height: 150px;
+}
+
+.credit-offers__req {
+  margin-top: 32px;
+  margin-bottom: 14px;
+}
+
+.credit-offers__term {
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+
+.credit-offers__your-rate {
+  margin-top: 14px;
+}
+
+.credit-offers__badge {
+  margin-top: 12px;
+  @include flex(space-between, center);
+  gap: 11px;
+}
+
+.credit-offers__btn {
+  margin-top: 90px;
+  width: 148px;
+}
+
+@media screen and (max-width: $breakpoint-md) {
+  .credit-offers__btn {
+    margin-top: 30px;
+  }
+}

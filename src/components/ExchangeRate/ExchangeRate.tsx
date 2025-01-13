@@ -27,7 +27,7 @@ const ExchangeRate = () => {
         const rates = await fetchCurrencyRates(TARGET_CURRENCY);
         setCurrencyRates(rates.conversion_rates);
       } catch (err) {
-        setError("Ошибка при загрузке валют");
+        setError("Error loading currencies");
       } finally {
         setLoading(false);
       }

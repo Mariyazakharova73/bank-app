@@ -1,0 +1,24 @@
+.link {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 8px;
+  padding: 11px;
+  font-size: $font-size-m;
+  font-weight: $font-weight-bold;
+  line-height: 112%;
+  letter-spacing: 0.02em;
+  background-color: $primary-color;
+  color: $color-light;
+  transition: all $anim-duration $anim-timing-func;
+
+  &:hover {
+    background-color: #7796c0;
+  }
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+  .link {
+    width: 100%;
+  }
+}

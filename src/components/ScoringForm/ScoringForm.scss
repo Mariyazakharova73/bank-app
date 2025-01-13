@@ -1,0 +1,137 @@
+.scoring-form {
+  margin-top: 24px;
+  margin-bottom: 96px;
+  background-color: $color-light;
+  padding: 32px;
+  border-radius: 28px;
+  box-shadow: $shadow-default;
+}
+
+.scoring-form__header {
+  display: flex;
+  gap: 40px;
+}
+
+@media screen and (max-width: $breakpoint-xl) {
+  .scoring-form__header {
+    flex-direction: column;
+  }
+}
+
+.scoring-form__title-wrapper {
+  @include flex(space-between, center);
+  column-gap: 30px;
+  row-gap: 10px;
+}
+
+@media screen and (max-width: $breakpoint-xl) {
+  .scoring-form__title-wrapper {
+    flex-direction: column;
+  }
+}
+
+.scoring-form__title {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  line-height: 1;
+}
+
+.scoring-form__step {
+  font-size: $font-size-m;
+  font-weight: $font-weight-medium;
+  line-height: 1;
+}
+
+.scoring-form__info-wrapper {
+  margin-top: 41px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.scoring-form__select-fields {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media screen and (max-width: $breakpoint-xl) {
+  .scoring-form__select-fields {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: $breakpoint-md) {
+  .scoring-form__select-fields {
+    grid-template-columns: 1fr;
+  }
+}
+
+.scoring-form__passport-fields {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media screen and (max-width: $breakpoint-md) {
+  .scoring-form__passport-fields {
+    grid-template-columns: 1fr;
+  }
+}
+
+.scoring-form__content {
+  margin-top: 32px;
+}
+
+.scoring-form__content-title {
+  font-size: $font-size-l;
+  font-weight: $font-weight-bold;
+  line-height: 1;
+  color: $color-dark;
+}
+
+.scoring-form__fields {
+  margin-top: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.scoring-form__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+@media screen and (max-width: $breakpoint-xl) {
+  .scoring-form__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: $breakpoint-md) {
+  .scoring-form__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.scoring-form__btn {
+  width: 148px;
+  margin-left: auto;
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+  .scoring-form__btn {
+    width: 100%;
+  }
+}
+
+.loading {
+  min-height: 300px;
+  @include flex(center, center);
+}
+
+.error {
+  min-height: 300px;
+  @include flex(center, center);
+}
