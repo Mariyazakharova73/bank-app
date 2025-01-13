@@ -7,9 +7,9 @@ import PrescoringForm from "../components/PrescoringForm/PrescoringForm";
 import { usePrescoringStore } from "../store/PrescoringStore";
 
 const LoanPage = () => {
-  const { creditOffers, emailSent } = usePrescoringStore();
+  const { creditOffers, offerSelected } = usePrescoringStore();
 
-  const content = emailSent ? <PreDecision /> : <CreditOffers />;
+  const content = offerSelected ? <PreDecision /> : <CreditOffers />;
 
   return (
     <main className="container">
@@ -22,4 +22,3 @@ const LoanPage = () => {
 };
 
 export default LoanPage;
- 
