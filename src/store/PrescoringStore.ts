@@ -4,6 +4,7 @@ import { apiMainClient } from "../api";
 import API_ENDPOINTS from "../api/endpoints";
 import { BASE_URL_MAIN } from "../api/mainApi";
 import { creditOffer, PrescoringFormValues } from "../types/types";
+import { LS_KEY_PRESCORING } from "../utils/constants/constants";
 
 interface PrescoringStore {
   loading: {
@@ -76,7 +77,7 @@ export const usePrescoringStore = create(
       },
     }),
     {
-      name: "prescoring",
+      name: LS_KEY_PRESCORING,
       partialize: (state) =>
         ({ creditOffers: state.creditOffers, offerSelected: state.offerSelected } as PrescoringStore),
     },

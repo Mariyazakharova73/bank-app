@@ -36,3 +36,8 @@ export const TARGET_CURRENCY = "RUB";
 export const CURRENCIES = ["USD", "EUR", "CAD", "CNY", "CHF", "SDG"];
 
 export const LS_KEY_SUBSCRIBE = "subscribe";
+
+// localStorage keys
+export const LS_KEY_PRESCORING = "prescoring";
+export const LS_KEY_SCORING = "scoring";
+export const LS_KEY_DOCS = "doc";

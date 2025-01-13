@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from "react";
+import { FC, PropsWithChildren } from "react";
 import "./Label.scss";
 
 type LabelProps = PropsWithChildren<{
@@ -6,7 +6,7 @@ type LabelProps = PropsWithChildren<{
   isRequired?: boolean;
 }>;
 
-const Label: React.FC<LabelProps> = ({ htmlFor, isRequired, children }) => {
+const Label: FC<LabelProps> = ({ htmlFor, isRequired, children }) => {
   return (
     <label
       htmlFor={htmlFor}

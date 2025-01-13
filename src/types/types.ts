@@ -98,6 +98,7 @@ export interface AppStatus {
   signDate: string | null;
   sesCode: string | null;
   statusHistory: StatusHistory[];
+  code: string | null;
 }
 
 // property AppStatus
