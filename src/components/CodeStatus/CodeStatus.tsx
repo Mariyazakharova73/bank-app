@@ -7,6 +7,7 @@ import "./CodeStatus.scss";
 
 const CodeStatus = () => {
   const navigate = useNavigate();
+
   const goToHome = () => {
     navigate(RoutePath.main);
   };

@@ -8,15 +8,12 @@ import { useScoringStore } from "./store/ScoringStore";
 const App = () => {
   const { getAppStatus, appId, appStatus } = useScoringStore();
 
-  const availableRoutes = getAvailableRoutes(appStatus?.status || null);
+  const availableRoutes = getAvailableRoutes(appStatus?.status || null, appStatus?.sesCode);
 
   useEffect(() => {
     if (!appId) return;
     getAppStatus(appId);
   }, [appId, getAppStatus]);
-
-  console.log("history: ", appStatus?.statusHistory);
-  console.log("appStatus: ", appStatus?.status);
 
   return (
     <>
