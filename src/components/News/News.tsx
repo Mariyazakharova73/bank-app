@@ -19,7 +19,7 @@ const News = () => {
         const res = await fetchNewsRates();
         setNews(res.articles);
       } catch (err) {
-        setError("Ошибка при загрузке новостей");
+        setError("Error loading news");
       } finally {
         setLoading(false);
       }

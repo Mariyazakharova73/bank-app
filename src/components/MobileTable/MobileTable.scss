@@ -1,0 +1,45 @@
+.table-mobile {
+  display: none;
+  padding: 16px;
+  gap: 16px;
+}
+
+.table-mobile__card {
+  border: 1px solid #ddd;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.table-mobile__row {
+  @include flex(space-between, center);
+  margin-bottom: 8px;
+}
+
+.table-mobile__label {
+  font-size: $font-size-xs;
+  font-weight: $font-weight-medium;
+  letter-spacing: 0.02em;
+  color: #4a5568;
+}
+
+.table-mobile__value {
+  flex: 1;
+  text-align: right;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-medium;
+  line-height: 17.69px;
+  letter-spacing: 0.02em;
+  color: #1a202c;
+}
+
+@media (max-width: $breakpoint-lg) {
+  .table {
+    display: none;
+  }
+
+  .table-mobile {
+    display: flex;
+    flex-direction: column;
+  }
+}

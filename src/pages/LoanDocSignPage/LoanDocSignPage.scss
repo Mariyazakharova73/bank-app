@@ -1,0 +1,49 @@
+.doc-sign {
+  margin-top: 104px;
+  margin-bottom: 96px;
+}
+
+.doc-sign__header {
+  @include flex(start, center);
+  gap: 120px;
+  row-gap: 10px;
+}
+
+@media screen and (max-width: $breakpoint-xl) {
+  .doc-sign__header {
+    flex-direction: column;
+  }
+}
+
+.doc-sign__title {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  line-height: 1;
+}
+
+.doc-sign__step {
+  font-size: $font-size-m;
+  font-weight: $font-weight-medium;
+  line-height: 1;
+}
+
+.doc-sign__text {
+  margin-top: 40px;
+  font-size: $font-size-l;
+  font-weight: $font-weight-medium;
+  line-height: 112%;
+  color: $text-color-gray;
+}
+
+.sign-form {
+  margin-top: 16px;
+  @include flex(flex-end, center);
+  gap: 80px;
+}
+
+.sign-form__btn {
+  width: 160px;
+  height: 40px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+}

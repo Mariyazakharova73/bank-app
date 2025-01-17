@@ -7,7 +7,7 @@ import AboutTabData from "../../components/AboutTabData/AboutTabData";
 import CashBackTabData from "../../components/CashBackTabData/CashBackTabData";
 import FAQTabData from "../../components/FAQTabData/FAQTabData";
 import RatesTabData from "../../components/RatesTabData/RatesTabData";
-import { FormFields } from "../../types/types";
+import { PrescoringFormFields } from "../../types/types";
 
 export const CREDIT_CARD_DATA = [
   {
@@ -194,65 +194,65 @@ export const SELECT_TERM_OPTIONS = [
   { label: "24 month", value: "24" },
 ];
 
-export const defaultValues = {
-  [FormFields.LAST_NAME]: "",
-  [FormFields.FIRST_NAME]: "",
-  [FormFields.MIDDLE_NAME]: "",
-  [FormFields.TERM]: 6,
-  [FormFields.EMAIL]: "",
-  [FormFields.BIRTHDATE]: "",
-  [FormFields.PASSPORT_SERIES]: "",
-  [FormFields.PASSPORT_NUMBER]: "",
-  [FormFields.AMOUNT]: 100000,
+export const prescoringDefaultValues = {
+  [PrescoringFormFields.LAST_NAME]: "",
+  [PrescoringFormFields.FIRST_NAME]: "",
+  [PrescoringFormFields.MIDDLE_NAME]: "",
+  [PrescoringFormFields.TERM]: 6,
+  [PrescoringFormFields.EMAIL]: "",
+  [PrescoringFormFields.BIRTHDATE]: "",
+  [PrescoringFormFields.PASSPORT_SERIES]: "",
+  [PrescoringFormFields.PASSPORT_NUMBER]: "",
+  [PrescoringFormFields.AMOUNT]: 100000,
 };
 
 export const FORM_FIELDS = [
   {
     type: "input",
     label: "Your last name",
-    name: FormFields.LAST_NAME,
+    name: PrescoringFormFields.LAST_NAME,
     placeholder: "For Example Doe",
     isRequired: true,
   },
   {
     type: "input",
     label: "Your first name",
-    name: FormFields.FIRST_NAME,
+    name: PrescoringFormFields.FIRST_NAME,
     placeholder: "For Example John",
     isRequired: true,
   },
   {
     type: "input",
     label: "Your patronymic",
-    name: FormFields.MIDDLE_NAME,
+    name: PrescoringFormFields.MIDDLE_NAME,
     placeholder: "For Example Victorovich",
     isRequired: true,
   },
   {
     type: "select",
     label: "Select term",
-    name: FormFields.TERM,
+    name: PrescoringFormFields.TERM,
     isRequired: true,
   },
 
   {
     type: "input",
     label: "Your email",
-    name: FormFields.EMAIL,
+    name: PrescoringFormFields.EMAIL,
     placeholder: "test@gmail.com",
     isRequired: true,
   },
   {
     type: "input",
     label: "Your date of birth",
-    name: FormFields.BIRTHDATE,
+    name: PrescoringFormFields.BIRTHDATE,
     placeholder: "Select Date and Time",
     isRequired: true,
   },
   {
     type: "input",
     label: "Your passport series",
-    name: FormFields.PASSPORT_SERIES,
+    name: PrescoringFormFields.PASSPORT_SERIES,
     placeholder: "0000",
     isRequired: true,
     inputType: "number",
@@ -260,7 +260,7 @@ export const FORM_FIELDS = [
   {
     type: "input",
     label: "Your passport number",
-    name: FormFields.PASSPORT_NUMBER,
+    name: PrescoringFormFields.PASSPORT_NUMBER,
     placeholder: "000000",
     isRequired: true,
     inputType: "number",

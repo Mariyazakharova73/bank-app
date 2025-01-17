@@ -1,4 +1,4 @@
-import { CASHBACK_CARD_DATA } from "../../utils/constants/credit-card";
+import { CASHBACK_CARD_DATA } from "../../utils/constants/loan";
 import { CardTheme } from "../Card/Card";
 import CashBackCard from "../CashBackCard/CashBackCard";
 import "./CashBackTabData.scss";

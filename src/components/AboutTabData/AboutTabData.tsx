@@ -1,4 +1,4 @@
-import { ABOUT_CARD_DATA } from "../../utils/constants/credit-card";
+import { ABOUT_CARD_DATA } from "../../utils/constants/loan";
 import Card, { CardTheme } from "../Card/Card";
 import "./AboutTabData.scss";
 

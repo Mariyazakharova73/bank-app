@@ -1,0 +1,18 @@
+.pdf-btn {
+  margin-top: 32px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+
+  &:hover .pdf-btn__text {
+    text-decoration: underline;
+  }
+}
+
+.pdf-btn__text {
+  color: $color-dark;
+  font-size: $font-size-l;
+  font-weight: $font-weight-medium;
+  line-height: 112%;
+}

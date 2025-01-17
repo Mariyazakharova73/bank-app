@@ -1,9 +1,37 @@
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import cardImage1 from "../../assets/images/design-card1.jpg";
-import { CREDIT_CARD_DATA } from "../../utils/constants/credit-card";
+import { RoutePath } from "../../routes";
+import { useDocStore } from "../../store/DocStore";
+import { useScoringStore } from "../../store/ScoringStore";
+import { CreditStatus } from "../../types/types";
+import { CREDIT_CARD_DATA } from "../../utils/constants/loan";
 import Tooltip from "../Tooltip/Tooltip";
 import "./CreditCard.scss";
 
 const CreditCard = () => {
+  const { appId, appStatus, getAppStatus } = useScoringStore();
+  const { signSuccess } = useDocStore();
+
+  useEffect(() => {
+    if (!appId) return;
+    getAppStatus(appId);
+  }, [appId, appStatus?.status, getAppStatus]);
+
+  const getPath = (): string => {
+    const basePath = `${RoutePath.loan}/${appId}`;
+
+    const pathMapping: Record<string, string> = {
+      [CreditStatus.APPROVED]: basePath,
+      [CreditStatus.CC_APPROVED]: `${basePath}/document`,
+      [CreditStatus.DOCUMENT_CREATED]: signSuccess ? `${basePath}/code` : `${basePath}/document/sign`,
+      [CreditStatus.CLIENT_DENIED]: RoutePath.loan,
+      [CreditStatus.CREDIT_ISSUED]: RoutePath.loan,
+    };
+
+    return pathMapping[appStatus?.status as CreditStatus] || basePath;
+  };
+
   return (
     <section className="credit-card">
       <div className="credit-card__content">
@@ -25,12 +53,21 @@ const CreditCard = () => {
             </li>
           ))}
         </ul>
-        <a
-          href="#prescoring-form"
-          className="credit-card__link"
-        >
-          Apply for card
-        </a>
+        {appId && appStatus?.status !== CreditStatus.CREDIT_ISSUED ? (
+          <Link
+            to={getPath() || RoutePath.loan}
+            className="credit-card__link"
+          >
+            Continue registration
+          </Link>
+        ) : (
+          <a
+            href="#application"
+            className="credit-card__link"
+          >
+            Apply for card
+          </a>
+        )}
       </div>
       <img
         className="credit-card__img"

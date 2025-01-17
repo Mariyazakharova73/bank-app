@@ -4,7 +4,7 @@
   background-color: $color-light;
   padding: 32px;
   border-radius: 28px;
-  box-shadow: 0px 2px 4px 0px #00000033, 0px 0px 8px 0px #00000014;
+  box-shadow: $shadow-default;
 }
 
 .prescoring-form__header {
@@ -45,10 +45,6 @@
 .prescoring-form__amount {
   margin-top: 32px;
   width: 568px;
-  // height: 164px;
-  // border: 1px solid #5b35d5;
-  // border-radius: 10px;
-  // padding: 24px;
 }
 
 @media screen and (max-width: $breakpoint-md) {
@@ -106,7 +102,6 @@
   width: 1px;
   border: 1px dashed #80808066;
   height: 150px;
-  // height: 232px;
 }
 
 @media screen and (max-width: $breakpoint-xl) {

@@ -1,0 +1,11 @@
+.code-status {
+  margin-top: 40px;
+  @include flex(center, center, column);
+  margin-bottom: 96px;
+}
+
+.code-status__img {
+  margin-bottom: 8px;
+  width: 150px;
+  height: 150px;
+}

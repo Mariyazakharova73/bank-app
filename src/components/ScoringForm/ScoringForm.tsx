@@ -1,118 +1,128 @@
 import { yupResolver } from "@hookform/resolvers/yup";
-import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
-import { submitInfo } from "../../api/mainApi";
-import { FormFields, InfoFormValues } from "../../types/types";
-import { defaultValues, FORM_FIELDS, SELECT_TERM_OPTIONS } from "../../utils/constants/credit-card";
-import { prescoringValidationSchema } from "../../utils/prescoringValidation";
+import { useScoringStore } from "../../store/ScoringStore";
+import { ScoringFormValues } from "../../types/types";
+import {
+  defaultValuesScoring,
+  EMPLOYMENT_FIELDS,
+  PASSPORT_DATA,
+  SCORING_SELECT_FIELDS,
+} from "../../utils/constants/loanAppId";
+import { scoringValidation } from "../../utils/scoringValidation";
 import Button, { BtnRadius } from "../Button/Button";
-import Divider from "../Divider/Divider";
 import Input from "../Input/Input";
 import Label from "../Label/Label";
 import Loader from "../Loader/Loader";
 import Select from "../Select/Select";
-import "./InformationForm.scss";
+import "./ScoringForm.scss";
 
-const InformationForm = () => {
-  const [loading, setLoading] = useState<boolean>(false);
-  const [error, setError] = useState<string | null>(null);
+const ScoringForm = () => {
+  const { submitScoring, loading, error } = useScoringStore();
 
   const {
     handleSubmit,
     control,
     formState: { isSubmitting },
   } = useForm({
-    defaultValues: defaultValues,
-    resolver: yupResolver(prescoringValidationSchema),
+    defaultValues: defaultValuesScoring,
+    resolver: yupResolver(scoringValidation),
   });
 
-  const onSubmit = async (data: InfoFormValues) => {
-    setLoading(true);
+  const onSubmit = async (data: ScoringFormValues) => {
     try {
-      await submitInfo(data);
+      submitScoring(data);
     } catch (err) {
-      setError("Ошибка при отправке формы");
-    } finally {
-      setLoading(false);
+      console.error("Error submitting form:", err);
     }
   };
 
-  if (loading)
+  if (loading.submitScoring)
     return (
       <div className="loading">
         <Loader />
       </div>
     );
 
-  if (error)
+  if (error.submitScoring)
     return (
       <div className="error">
-        <p>{error}</p>
+        <p>{error.submitScoring}</p>
       </div>
     );
 
   return (
     <form
-      id="prescoring-form"
-      name="prescoring-form"
+      id="scoring-form"
+      name="scoring-form"
       onSubmit={handleSubmit(onSubmit)}
-      className="prescoring-form"
+      className="scoring-form"
     >
-      <div className="prescoring-form__header">
+      <div className="scoring-form__header">
         <div>
-          <div className="prescoring-form__title-wrapper">
-            <h2 className="prescoring-form__title">Customize your card</h2>
-            <p className="prescoring-form__step">Step 1 of 5</p>
+          <div className="scoring-form__title-wrapper">
+            <h2 className="scoring-form__title">Continuation of the application</h2>
+            <p className="scoring-form__step">Step 2 of 5</p>
           </div>
-
-          <div className="prescoring-form__amount">
-            {/* <p className="prescoring-form__text">Select amount</p>
-            <p className="prescoring-form__number">150 000</p>
-            <div className="prescoring-form__slider"></div>
-            <div className="prescoring-form__amount-wrapper">
-              <p className="prescoring-form__amount-number">15 000</p>
-              <p className="prescoring-form__amount-number">600 000</p>
-            </div> */}
-            <div>
+        </div>
+      </div>
+      <div className="scoring-form__info-wrapper">
+        <div className="scoring-form__select-fields">
+          {SCORING_SELECT_FIELDS.map((item) => (
+            <div key={item.name}>
               <Label
-                isRequired
-                htmlFor={FormFields.AMOUNT}
+                isRequired={item.isRequired}
+                htmlFor={item.name}
               >
-                Select amount
+                {item.label}
               </Label>
               <Controller
-                name={FormFields.AMOUNT}
+                name={item.name}
                 control={control}
                 render={({ field, fieldState }) => (
-                  <Input
+                  <Select
                     {...field}
-                    placeholder="10 000 - 1 000 000"
-                    value={field.value}
+                    options={item.options}
                     error={fieldState.error?.message}
-                    isTouched={fieldState.isTouched}
-                    isValid={fieldState.isTouched && !fieldState.error && Boolean(field.value)}
-                    type="number"
                   />
                 )}
               />
             </div>
-          </div>
+          ))}
         </div>
-
-        <div className="prescoring-form__divider"></div>
-
-        <div className="prescoring-form__info">
-          <p className="prescoring-form__info-title">You have chosen the amount</p>
-          <p className="prescoring-form__info-amount">150 000 ₽</p>
-          <Divider />
+        <div className="scoring-form__passport-fields">
+          {PASSPORT_DATA.map((item) => (
+            <div key={item.name}>
+              <Label
+                isRequired={item.isRequired}
+                htmlFor={item.name}
+              >
+                {item.label}
+              </Label>
+              <Controller
+                name={item.name}
+                control={control}
+                render={({ field, fieldState }) => (
+                  <Input
+                    {...field}
+                    placeholder={item.placeholder}
+                    value={field.value}
+                    error={fieldState.error?.message}
+                    isTouched={fieldState.isTouched}
+                    isValid={fieldState.isTouched && !fieldState.error && Boolean(field.value)}
+                    type={item.inputType}
+                  />
+                )}
+              />
+            </div>
+          ))}
         </div>
       </div>
-      <div className="prescoring-form__content">
-        <p className="prescoring-form__content-title">Contact Information</p>
+      <div className="scoring-form__content">
+        <p className="scoring-form__content-title">Employment</p>
         <div>
-          <div className="prescoring-form__fields">
-            <div className="prescoring-form__grid">
-              {FORM_FIELDS.map(({ type, label, name, placeholder, isRequired, inputType }) => (
+          <div className="scoring-form__fields">
+            <div className="scoring-form__grid">
+              {EMPLOYMENT_FIELDS.map(({ type, label, name, placeholder, isRequired, inputType, options }) => (
                 <div key={name}>
                   <Label
                     isRequired={isRequired}
@@ -137,7 +147,7 @@ const InformationForm = () => {
                       ) : type === "select" ? (
                         <Select
                           {...field}
-                          options={SELECT_TERM_OPTIONS}
+                          options={options || []}
                           error={fieldState.error?.message}
                         />
                       ) : (
@@ -153,7 +163,7 @@ const InformationForm = () => {
               type="submit"
               disabled={isSubmitting}
               radius={BtnRadius.SMALL}
-              className="prescoring-form__btn"
+              className="scoring-form__btn"
             >
               {isSubmitting ? "Loading..." : "Continue"}
             </Button>
@@ -164,4 +174,4 @@ const InformationForm = () => {
   );
 };
 
-export default InformationForm;
+export default ScoringForm;

@@ -25,6 +25,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   size?: BtnSizes;
   disabled?: boolean;
   radius?: BtnRadius;
+  color?: string;
 }
 
 const Button = (props: PropsWithChildren<ButtonProps>) => {
@@ -35,6 +36,7 @@ const Button = (props: PropsWithChildren<ButtonProps>) => {
     size = BtnSizes.M,
     radius = BtnRadius.DEFAULT,
     disabled,
+    color,
     type = "button",
     ...otherProps
   } = props;
@@ -49,6 +51,7 @@ const Button = (props: PropsWithChildren<ButtonProps>) => {
         { "btn--disabled": disabled },
         className,
       )}
+      style={color ? { backgroundColor: color } : undefined}
       disabled={disabled}
       {...otherProps}
       type={type}
