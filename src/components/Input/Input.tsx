@@ -31,7 +31,10 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           onChange={handleChange}
           type={type}
         />
-        <div className={circleClass}></div>
+        <div
+          className={circleClass}
+          role="presentation"
+        ></div>
         {error && <p className="input-wrapper__error-message">{error}</p>}
       </div>
     );
