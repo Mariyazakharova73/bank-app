@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import ReactDOM from "react-dom";
 import "./Modal.scss";
 
@@ -9,11 +9,14 @@ interface ModalProps {
   title: string;
 }
 
-const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }) => {
+const Modal: FC<ModalProps> = ({ isOpen, onClose, title, children }) => {
+  if (!isOpen) return null;
+
   return ReactDOM.createPortal(
     <div
       className={`modal ${isOpen ? "modal--opened" : ""}`}
       onClick={onClose}
+      role="dialog"
     >
       <div
         className="modal__content"

@@ -9,7 +9,7 @@ const Features = () => {
         <img
           className="features__img"
           src={manImg}
-          alt="Человек работает за ноутбуком "
+          alt="Человек работает за ноутбуком"
         />
       </div>
       <div className="features__content">

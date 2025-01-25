@@ -1,6 +1,7 @@
 import { GET_CARD_DATA } from "../../utils/constants/loan";
 import Divider from "../Divider/Divider";
 import "./GetCardSteps.scss";
+
 const GetCardSteps = () => {
   return (
     <section className="get-card">

@@ -34,7 +34,10 @@ const News = () => {
   const renderContent = () => {
     if (loading)
       return (
-        <div className="news__spinner">
+        <div
+          className="news__spinner"
+          data-testid="loader"
+        >
           <Loader />
         </div>
       );

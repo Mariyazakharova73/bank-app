@@ -8,7 +8,12 @@ export interface CircleProps {
 const Circle: FC<CircleProps> = ({ isSuccess }) => {
   const circleClass = `circle ${isSuccess ? "circle--success" : "circle--error"}`;
 
-  return <span className={circleClass}></span>;
+  return (
+    <span
+      className={circleClass}
+      role="status"
+    ></span>
+  );
 };
 
 export default Circle;

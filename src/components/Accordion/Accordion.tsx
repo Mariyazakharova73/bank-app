@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { FC, useState } from "react";
 import Arrow from "../../assets/images/accordion-btn.svg";
 import "./Accordion.scss";
 
@@ -12,7 +12,7 @@ interface AccordionProps {
   items: AccordionItem[];
 }
 
-const Accordion: React.FC<AccordionProps> = ({ items }) => {
+const Accordion: FC<AccordionProps> = ({ items }) => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const toggleItem = (index: number) => {
