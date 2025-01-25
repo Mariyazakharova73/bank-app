@@ -34,7 +34,10 @@ const PrescoringForm = () => {
 
   if (loading.submitPrescoring)
     return (
-      <div className="loading">
+      <div
+        className="loading"
+        data-testid="loader"
+      >
         <Loader />
       </div>
     );
@@ -138,6 +141,7 @@ const PrescoringForm = () => {
             </div>
 
             <Button
+              role="button"
               type="submit"
               disabled={isSubmitting}
               radius={BtnRadius.SMALL}

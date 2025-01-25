@@ -2,22 +2,25 @@ import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import Link from "./Link";
 
+const LINK = "https://external.com";
+const EXTERNAL_LINK = "/internal-page";
+
 describe("Link component", () => {
   it("renders a RouterLink when the link is internal", () => {
     render(
       <BrowserRouter>
-        <Link to="/internal-page">Internal Link</Link>
+        <Link to={EXTERNAL_LINK}>Internal Link</Link>
       </BrowserRouter>,
     );
 
     const link = screen.getByText("Internal Link");
-    expect(link).toHaveAttribute("href", "/internal-page");
+    expect(link).toHaveAttribute("href", EXTERNAL_LINK);
   });
 
   it("renders an <a> tag when the link is external", () => {
     render(
       <Link
-        to="https://external.com"
+        to={LINK}
         external={true}
       >
         External Link
@@ -25,14 +28,14 @@ describe("Link component", () => {
     );
 
     const link = screen.getByText("External Link");
-    expect(link).toHaveAttribute("href", "https://external.com");
+    expect(link).toHaveAttribute("href", LINK);
     expect(link).toHaveAttribute("target", "_self");
   });
 
   it("renders an <a> tag with correct target and rel attributes for external links", () => {
     render(
       <Link
-        to="https://external.com"
+        to={LINK}
         external={true}
         target="_blank"
         rel="noopener noreferrer"
@@ -50,7 +53,7 @@ describe("Link component", () => {
     render(
       <BrowserRouter>
         <Link
-          to="/internal-page"
+          to={EXTERNAL_LINK}
           className="custom-class"
         >
           Link with Class

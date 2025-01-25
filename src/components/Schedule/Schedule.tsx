@@ -56,7 +56,7 @@ const Schedule = () => {
 
   if (loading.createDocuments)
     return (
-      <div className="loading">
+      <div className="loading" data-testid="loader">
         <Loader />
       </div>
     );

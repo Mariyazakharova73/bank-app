@@ -59,7 +59,7 @@ describe("Checkbox Component", () => {
 
     const checkbox = screen.getByRole("checkbox");
 
-    //  checkbox выключен
+    // checkbox выключен
     expect(checkbox).not.toBeChecked();
 
     // вызовется onChange с true
@@ -78,7 +78,6 @@ describe("Checkbox Component", () => {
       />,
     );
 
-    // вызовется onChange с false
     fireEvent.click(checkbox);
     expect(handleChange).toHaveBeenCalledWith(false);
   });
