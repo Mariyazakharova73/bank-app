@@ -25,3 +25,7 @@ React, react-router-dom, scss, БЭМ
 Запустить eslint:
 
     npm run lint
+
+Запустить тесты:
+
+    npx vitest

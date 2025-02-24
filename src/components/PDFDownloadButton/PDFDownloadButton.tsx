@@ -8,11 +8,17 @@ interface PDFDownloadButtonProps {
 }
 
 const PDFDownloadButton: FC<PDFDownloadButtonProps> = ({ fileName, fileUrl }) => {
+  if (!fileUrl) {
+    return null;
+  }
+
   return (
     <a
       href={fileUrl}
       download={fileName}
       className="pdf-btn"
+      role="link"
+      aria-label={fileName}
     >
       <div className="pdf-btn__img">
         <img

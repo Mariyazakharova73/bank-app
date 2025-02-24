@@ -17,6 +17,7 @@ const Divider: FC<DividerProps> = ({ color = "rgba(128, 128, 128, 0.2)", size = 
       style={{
         backgroundColor: color,
       }}
+      role="presentation"
     />
   );
 };
